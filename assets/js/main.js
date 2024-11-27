@@ -108,4 +108,13 @@ if (localStorage.getItem('reference') != null) {
                 }
             })
         })
+
+        const exitButton = document.getElementById('exit-button');
+        exitButton.style.display = 'flex';
+
+        exitButton.onclick = () => {
+            localStorage.removeItem('reference');
+        localStorage.removeItem('name');
+            location.reload();
+        }
 }
